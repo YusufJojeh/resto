@@ -1,0 +1,34 @@
+import AppLogoIcon from '@/components/app-logo-icon';
+import { Link } from '@inertiajs/react';
+
+interface AuthLayoutProps {
+    children: React.ReactNode;
+    name?: string;
+    title?: string;
+    description?: string;
+}
+
+export default function AuthSimpleLayout({ children, title, description }: AuthLayoutProps) {
+    return (
+        <div className="bg-background flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
+            <div className="w-full max-w-sm">
+                <div className="flex flex-col gap-8">
+                    <div className="flex flex-col items-center gap-4">
+                        <Link href={route('home')} className="flex flex-col items-center gap-2 font-medium">
+                            <div className="from-accent text-accent-foreground shadow-accent/25 ring-accent/20 mb-1 flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br via-[var(--brand-orange)] to-orange-500 shadow-lg ring-1">
+                                <AppLogoIcon className="text-accent-foreground size-9 fill-current" />
+                            </div>
+                            <span className="sr-only">{title}</span>
+                        </Link>
+
+                        <div className="space-y-2 text-center">
+                            <h1 className="text-xl font-medium">{title}</h1>
+                            <p className="text-muted-foreground text-center text-sm">{description}</p>
+                        </div>
+                    </div>
+                    {children}
+                </div>
+            </div>
+        </div>
+    );
+}
