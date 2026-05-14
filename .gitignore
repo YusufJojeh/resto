@@ -1,5 +1,4 @@
 .DS_Store
-.DS_Store
 Thumbs.db
 .env
 .env.*
@@ -13,16 +12,21 @@ Thumbs.db
 /.idea
 /.nova
 /.phpunit.cache
+/.vagrant
 /.vscode
 /.zed
+bootstrap/compiled.php
 /bootstrap/ssr
 /bootstrap/cache
 /bootstrap/cache/
+/app/storage/
 /node_modules
 /node_modules/
 /public/build
 /public/hot
 /public/storage
+/public_html/storage
+/public_html/hot
 /storage/*.key
 /storage/logs/
 /storage/framework/cache/
